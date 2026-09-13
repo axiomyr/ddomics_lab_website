@@ -1210,6 +1210,8 @@ export const people: Person[] = [
     name: "Bhagyashree Karmarkar",
     role: "Ph.D. Student",
     group: "student",
+    photo: photoBhagyashreeKarmarkar,
+    noProfilePage: true,
   },
   {
     slug: "harshada-pardeshi",
@@ -1467,6 +1469,7 @@ export const people: Person[] = [
         place: "Rural Hospital, Malvan, Sindhudurg, Maharashtra",
       },
     ],
+    noProfilePage: true,
   },
   {
     slug: "tanaya-ghanvatkar",
