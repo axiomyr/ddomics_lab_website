@@ -7,7 +7,7 @@ import { featuredPublications } from "@/lib/lab-data";
 const profileLinks = [
   {
     label: "Google Scholar",
-    href: "https://scholar.google.com/citations?user=Dhiraj+Dhotre",
+    href: "https://scholar.google.com/citations?hl=en&user=wURU1tQAAAAJ",
   },
   {
     label: "Scopus",
@@ -15,7 +15,7 @@ const profileLinks = [
   },
   {
     label: "ORCID",
-    href: "https://orcid.org/orcid-search/search?searchQuery=Dhiraj%20Dhotre",
+    href: "https://orcid.org/0000-0002-5000-7396",
   },
 ] as const;
 
