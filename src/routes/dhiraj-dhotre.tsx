@@ -7,6 +7,7 @@ import iconGmail from "@/assets/social/gmail.png";
 import iconLinkedin from "@/assets/social/linkedin.png";
 import iconGithub from "@/assets/social/github.png";
 import iconOrcid from "@/assets/social/orcid.png";
+import iconScholar from "@/assets/social/scholar.png";
 
 const socialLabels: Record<string, string> = {
   linkedin: "LinkedIn",
@@ -19,6 +20,7 @@ const socialIcons: Record<string, string> = {
   linkedin: iconLinkedin,
   github: iconGithub,
   orcid: iconOrcid,
+  scholar: iconScholar,
 };
 
 export const Route = createFileRoute("/dhiraj-dhotre")({

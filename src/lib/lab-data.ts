@@ -1122,8 +1122,6 @@ export type SocialLinks = {
   github?: string;
   website?: string;
   instagram?: string;
-  scopus?: string;
-  loop?: string;
 };
 
 export type PersonExperience = {
@@ -1205,8 +1203,6 @@ export const people: Person[] = [
     socials: {
       orcid: "https://orcid.org/0000-0002-2595-6549",
       linkedin: "https://www.linkedin.com/in/dr-niraj-rane-65759b6a/",
-      scopus: "https://www.scopus.com/authid/detail.uri?authorId=54417793800",
-      loop: "https://loop.frontiersin.org/people/1051868/overview",
     },
   },
   {
