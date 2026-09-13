@@ -180,14 +180,6 @@ function PeoplePage() {
               </Reveal>
             ))}
           </div>
-          <Reveal delay={140}>
-            <p className="measure mt-12 leading-relaxed text-muted-foreground">
-              Former students and staff of the lab have moved on to postdoctoral
-              positions, industry bioinformatics roles and doctoral programmes
-              in India and abroad. Alumni listings are updated each academic
-              year.
-            </p>
-          </Reveal>
         </div>
       </section>
 
