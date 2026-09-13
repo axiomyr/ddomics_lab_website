@@ -13,6 +13,7 @@ import iconLinkedin from "@/assets/social/linkedin.png";
 import iconOrcid from "@/assets/social/orcid.png";
 import iconX from "@/assets/social/x.png";
 import iconGithub from "@/assets/social/github.png";
+import iconScholar from "@/assets/social/scholar.png";
 
 export const Route = createFileRoute("/people/$personId")({
   loader: ({ params }) => {
@@ -70,8 +71,6 @@ const socialLabels: Record<string, string> = {
   github: "GitHub",
   website: "Website",
   instagram: "Instagram",
-  scopus: "Scopus",
-  loop: "Loop (Frontiers)",
 };
 
 const socialIcons: Record<string, string> = {
@@ -80,6 +79,7 @@ const socialIcons: Record<string, string> = {
   orcid: iconOrcid,
   github: iconGithub,
   instagram: iconInstagram,
+  scholar: iconScholar,
 };
 
 function PersonProfilePage() {
