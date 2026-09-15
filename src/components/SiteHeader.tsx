@@ -48,7 +48,7 @@ export function SiteHeader() {
             </span>
           </Link>
 
-          <nav className="hidden items-center gap-2 lg:flex">
+          <nav className="hidden items-center gap-8 lg:flex">
             {navMenu.map((item) => (
               <DesktopNavItem key={item.to} item={item} />
             ))}
@@ -189,7 +189,7 @@ function DesktopNavItem({ item }: { item: NavMenuItem }) {
       <Link
         to={item.to}
         activeOptions={{ exact: item.to === "/" }}
-        className="link-underline nav-item px-3 py-2 opacity-80 transition-opacity hover:opacity-100 data-[status=active]:opacity-100"
+        className="link-underline nav-item px-0 py-[2.17px] opacity-80 transition-opacity hover:opacity-100 data-[status=active]:opacity-100"
       >
         {item.label}
       </Link>
@@ -206,7 +206,7 @@ function DesktopNavItem({ item }: { item: NavMenuItem }) {
     >
       <Link
         to={item.to}
-        className="link-underline nav-item flex items-center gap-1.5 px-3 py-2 opacity-80 transition-opacity hover:opacity-100 data-[status=active]:opacity-100"
+        className="link-underline nav-item flex items-center gap-1.5 px-0 py-[2.17px] opacity-80 transition-opacity hover:opacity-100 data-[status=active]:opacity-100"
         aria-haspopup="true"
         aria-expanded={hovered}
       >
@@ -223,7 +223,7 @@ function DesktopNavItem({ item }: { item: NavMenuItem }) {
       </Link>
 
       <div
-        className={`absolute top-full left-1/2 z-50 w-64 -translate-x-1/2 pt-3 transition-all duration-300 ease-out ${
+        className={`absolute top-full left-1/2 z-50 w-72 -translate-x-1/2 pt-3 transition-all duration-300 ease-out ${
           hovered
             ? "pointer-events-auto translate-y-0 opacity-100"
             : "pointer-events-none -translate-y-2 opacity-0"
@@ -236,7 +236,7 @@ function DesktopNavItem({ item }: { item: NavMenuItem }) {
               to={sub.to}
               {...(sub.hash ? { hash: sub.hash } : {})}
               onClick={() => setHovered(false)}
-              className="nav-item block px-5 py-3 text-sm opacity-80 transition-all duration-200 hover:bg-primary/10 hover:pl-6 hover:opacity-100"
+              className="nav-item block px-5 py-3 opacity-80 transition-all duration-200 hover:bg-primary/10 hover:pl-6 hover:opacity-100"
             >
               {sub.label}
             </Link>
