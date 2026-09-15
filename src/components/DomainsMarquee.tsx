@@ -17,12 +17,12 @@ export function DomainsMarquee() {
             key={`${t.slug}-${i}`}
             to="/research/$trackSlug"
             params={{ trackSlug: t.slug }}
-            className="lift-card sheen group block w-72 shrink-0 border border-border bg-card p-6 sm:w-80"
+            className="lift-card sheen group block w-[375px] shrink-0 border border-border bg-card p-7"
           >
-            <h3 className="display-title text-lg leading-snug transition-colors group-hover:text-primary">
+            <h3 className="display-title text-xl leading-snug transition-colors group-hover:text-primary">
               {t.title}
             </h3>
-            <div className="art-tile mt-5 aspect-[4/3] w-full overflow-hidden border border-border">
+            <div className="art-tile mt-6 aspect-[3/2] w-full overflow-hidden border border-border">
               <img
                 src={t.image}
                 alt=""
