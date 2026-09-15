@@ -96,7 +96,7 @@ function PersonProfilePage() {
 
   return (
     <>
-      <section className="hero-veil relative -mt-24 flex min-h-[64vh] items-end overflow-hidden text-deep-foreground">
+      <section className="hero-veil relative -mt-24 flex min-h-[32vh] items-end overflow-hidden text-deep-foreground">
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-6 pt-44 pb-16 lg:grid-cols-12 lg:px-10 lg:pt-52 lg:pb-24">
           <Reveal className="lg:col-span-4">
             <div className="silver-frame sheen relative mx-auto flex aspect-[4/5] w-full max-w-xs items-center justify-center overflow-hidden bg-card/40 backdrop-blur">
