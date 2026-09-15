@@ -11,13 +11,13 @@ export function DomainsMarquee() {
 
   return (
     <div className="relative overflow-hidden py-4">
-      <div className="domains-marquee-track gap-6">
+      <div className="domains-marquee-track gap-[20px]">
         {items.map((t, i) => (
           <Link
             key={`${t.slug}-${i}`}
             to="/research/$trackSlug"
             params={{ trackSlug: t.slug }}
-            className="lift-card sheen group block w-[375px] shrink-0 border border-border bg-card p-7"
+            className="lift-card sheen group block w-[377.828px] shrink-0 border border-border bg-card p-7"
           >
             <h3 className="display-title text-xl leading-snug transition-colors group-hover:text-primary">
               {t.title}
