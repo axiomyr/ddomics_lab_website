@@ -49,7 +49,7 @@ export function PageHero({
   return (
     <section
       ref={ref}
-      className="relative -mt-24 flex min-h-[64vh] items-end overflow-hidden bg-deep text-deep-foreground"
+      className="relative -mt-24 flex min-h-[32vh] items-end overflow-hidden bg-deep text-deep-foreground"
     >
       <div
         aria-hidden="true"
