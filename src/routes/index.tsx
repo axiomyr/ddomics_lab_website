@@ -1,9 +1,13 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { Reveal } from "@/components/Reveal";
 import { DomainsMarquee } from "@/components/DomainsMarquee";
 import heroBg from "@/assets/microbiome-heads.png";
 import artHand from "@/assets/art-hand.png";
 import artMicrobes from "@/assets/art-microbes.png";
+import logoBmgf from "@/assets/collaborators/bmgf.png";
+import logoDst from "@/assets/collaborators/dst.png";
+import logoDbt from "@/assets/collaborators/dbt.png";
+import logoNccs from "@/assets/collaborators/nccs.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -31,8 +35,8 @@ export const Route = createFileRoute("/")({
 function Home() {
   return (
     <>
-      {/* Hero */}
-      <section className="hero-veil relative -mt-24 flex min-h-[64vh] items-center overflow-hidden text-deep-foreground">
+      {/* Hero — plain image, no overlaid text */}
+      <section className="hero-veil relative -mt-24 flex min-h-[32vh] items-center overflow-hidden text-deep-foreground">
         <img
           src={heroBg}
           alt=""
@@ -45,10 +49,23 @@ function Home() {
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_20%,var(--deep)_92%)]"
         />
+      </section>
 
-        {/* Floating concept art */}
-
-        <div className="relative mx-auto w-full max-w-4xl px-6 pt-32 pb-24 text-center">
+      {/* Mission — directly beneath the hero image, no gap */}
+      <section className="relative overflow-hidden bg-ink text-ink-foreground">
+        <img
+          src={artHand}
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none absolute -left-16 bottom-0 hidden h-[85%] object-contain opacity-25 mix-blend-screen lg:block"
+        />
+        <img
+          src={artMicrobes}
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none absolute -right-20 top-6 hidden h-[70%] object-contain opacity-25 mix-blend-screen lg:block"
+        />
+        <div className="relative mx-auto max-w-4xl px-6 pt-16 pb-16 text-center lg:pt-20 lg:pb-20">
           <Reveal delay={120}>
             <h1 className="display-title text-4xl leading-[1.15] sm:text-5xl lg:text-6xl">
               <em>The microbiome is an integral part of</em>
@@ -56,31 +73,26 @@ function Home() {
               <span className="silver-text">Human Health</span>
             </h1>
           </Reveal>
-
           <Reveal delay={200}>
-            <p className="measure mx-auto mt-8 text-base leading-relaxed opacity-70 sm:text-lg">
-              We map microbial communities across Indian populations — gut, oral
-              and skin — combining culturomics, next-generation sequencing and
-              multi-omics to turn community structure into testable biology.
+            <p className="measure mx-auto mt-8 text-lg leading-relaxed text-muted-foreground">
+              Human body harbors microbial cells in 1:1 proportion to human
+              cells and these microbes are involved in host activities
+              including metabolism, immune modulation and production of
+              antimicrobial agents. Imbalance in microbial communities
+              associated with the host has been observed in multiple diseases
+              as well as metabolic disorders.
             </p>
           </Reveal>
-
-          <Reveal
-            delay={260}
-            className="mt-10 flex flex-wrap items-center justify-center gap-3"
-          >
-            <Link
-              to="/research"
-              className="eyebrow sheen border border-primary px-7 py-3 tracking-[0.12em] text-primary uppercase transition-colors hover:bg-primary hover:text-primary-foreground"
-            >
-              Explore the research
-            </Link>
-            <Link
-              to="/dhiraj-dhotre"
-              className="eyebrow sheen border border-silver/50 px-7 py-3 tracking-[0.12em] uppercase transition-colors hover:border-silver"
-            >
-              Meet the PI
-            </Link>
+          <Reveal delay={280}>
+            <p className="measure mx-auto mt-6 text-lg leading-relaxed text-muted-foreground">
+              In the DDOmics Lab, we study microbial community structure and
+              function in human health and diseases using classic
+              microbiology techniques, next generation sequencing and
+              multi-omics data integration approach. Our areas of focus are
+              Microbiome of Indian healthy communities, Microbiome of gluten
+              spectrum disorders, Mother and infant microbiome, Gut-brain
+              axis, and Surveillance of SARS-CoV-2.
+            </p>
           </Reveal>
         </div>
       </section>
@@ -99,44 +111,38 @@ function Home() {
         </div>
       </section>
 
-      {/* Mission */}
-      <section className="relative overflow-hidden bg-ink text-ink-foreground">
-        <img
-          src={artHand}
-          alt=""
-          aria-hidden="true"
-          className="pointer-events-none absolute -left-16 bottom-0 hidden h-[85%] object-contain opacity-25 mix-blend-screen lg:block"
-        />
-        <img
-          src={artMicrobes}
-          alt=""
-          aria-hidden="true"
-          className="pointer-events-none absolute -right-20 top-6 hidden h-[70%] object-contain opacity-25 mix-blend-screen lg:block"
-        />
-        <div className="relative mx-auto max-w-4xl px-6 py-16 text-center lg:py-20">
+      {/* Collaborators & funders */}
+      <section className="border-t border-border bg-background">
+        <div className="mx-auto max-w-6xl px-6 py-16 text-center lg:px-10 lg:py-20">
           <Reveal>
-            <hr className="silver-rule mx-auto mb-14 w-72" />
-            <h2 className="display-title text-2xl leading-snug sm:text-4xl">
-              <em>In the DDOmics Lab, we study</em> microbial communities{" "}
-              <em>in human health and disease.</em>
-            </h2>
-          </Reveal>
-          <Reveal delay={100}>
-            <p className="measure mx-auto mt-8 text-lg leading-relaxed text-muted-foreground">
-              The human body carries microbial cells in roughly 1:1 proportion
-              to human cells, involved in metabolism, immune modulation, and
-              production of antimicrobial agents — and imbalance in these
-              communities has been observed across a range of diseases and
-              metabolic disorders. We study microbial community structure and
-              function using classic microbiology, next-generation sequencing,
-              and multi-omics data integration.
+            <p className="eyebrow mb-10 text-muted-foreground">
+              Collaborators &amp; Funders
             </p>
           </Reveal>
-          <Reveal delay={200}>
-            <h3 className="display-title mt-10 text-xl sm:text-2xl">
-              What does India's microbiome look like — and what can it tell us
-              about health?
-            </h3>
+          <Reveal
+            delay={100}
+            className="flex flex-wrap items-center justify-center gap-x-16 gap-y-10"
+          >
+            <img
+              src={logoBmgf}
+              alt="Bill &amp; Melinda Gates Foundation"
+              className="h-10 w-auto object-contain grayscale lg:h-12"
+            />
+            <img
+              src={logoDst}
+              alt="Department of Science and Technology, Government of India"
+              className="h-16 w-auto object-contain grayscale lg:h-20"
+            />
+            <img
+              src={logoDbt}
+              alt="Department of Biotechnology, Government of India"
+              className="h-16 w-auto object-contain grayscale lg:h-20"
+            />
+            <img
+              src={logoNccs}
+              alt="National Centre for Cell Science"
+              className="h-16 w-auto object-contain grayscale lg:h-20"
+            />
           </Reveal>
         </div>
       </section>
