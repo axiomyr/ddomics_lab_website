@@ -14,8 +14,10 @@ export function SiteFooter() {
 
         <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
           <div>
-            <p className="eyebrow mb-3 opacity-70">Contact</p>
-            <p className="text-sm leading-relaxed">
+            <p className="display-title mb-5 text-[28.376px] font-bold text-primary">
+              Contact
+            </p>
+            <p className="text-[21.6752px] leading-relaxed">
               Dr. Dhiraj S. Dhotre, Scientist 'E'
               <br />
               Lab 3, Old Building
@@ -27,8 +29,10 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <p className="eyebrow mb-3 opacity-70">Navigate</p>
-            <ul className="space-y-2 text-sm">
+            <p className="display-title mb-5 text-[28.376px] font-bold text-primary">
+              Navigate
+            </p>
+            <ul className="space-y-5 text-[21.6752px]">
               {navLinks.map((l) => (
                 <li key={l.to}>
                   <Link
@@ -43,8 +47,10 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <p className="eyebrow mb-3 opacity-70">More</p>
-            <ul className="space-y-2 text-sm">
+            <p className="display-title mb-5 text-[28.376px] font-bold text-primary">
+              More
+            </p>
+            <ul className="space-y-5 text-[21.6752px]">
               <li>
                 <Link
                   to="/join"
@@ -60,7 +66,7 @@ export function SiteFooter() {
                   aria-label={`Email ${lab.email}`}
                   className="inline-flex items-center gap-2 transition-opacity hover:opacity-80"
                 >
-                  <img src={iconGmail} alt="" className="h-4 w-4 rounded-sm" />
+                  <img src={iconGmail} alt="" className="h-5 w-5 rounded-sm" />
                   {lab.email}
                 </a>
               </li>
@@ -76,8 +82,10 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <p className="eyebrow mb-3 opacity-70">Funded by</p>
-            <p className="text-sm leading-relaxed">
+            <p className="display-title mb-5 text-[28.376px] font-bold text-primary">
+              Funded by
+            </p>
+            <p className="text-[21.6752px] leading-relaxed">
               Department of Biotechnology, Department of Science &amp;
               Technology, and Science &amp; Engineering Research Board, New
               Delhi.
@@ -86,7 +94,7 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-14 flex flex-col items-center gap-4 border-t border-ink-foreground/10 pt-8 sm:flex-row sm:justify-between">
-          <p className="font-mono text-sm opacity-50">
+          <p className="font-mono text-[12px] opacity-50">
             © {new Date().getFullYear()} {lab.name}, NCCS Pune. All rights
             reserved.
           </p>
@@ -94,9 +102,9 @@ export function SiteFooter() {
             href="https://github.com/oktavianos"
             target="_blank"
             rel="noreferrer"
-            className="sheen inline-flex items-center gap-2 border border-ink-foreground/20 px-3 py-1.5 font-mono text-sm opacity-80 transition-all hover:border-ink-foreground/40 hover:opacity-100"
+            className="sheen inline-flex items-center gap-2 border border-ink-foreground/20 px-3 py-1.5 font-mono text-[12px] opacity-80 transition-all hover:border-ink-foreground/40 hover:opacity-100"
           >
-            <Github className="h-3.5 w-3.5" strokeWidth={1.75} />
+            <Github className="h-3 w-3" strokeWidth={1.75} />
             Site built by Suyash Jadhav
           </a>
         </div>
