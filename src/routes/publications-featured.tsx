@@ -58,33 +58,45 @@ function FeaturedPublicationsPage() {
 
       <section className="bg-background">
         <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
-          <Reveal className="flex flex-wrap items-baseline justify-end gap-x-8 gap-y-4">
-            <p className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
-              {profileLinks.map((link, i) => (
-                <span key={link.label} className="flex items-center gap-x-4">
-                  {i > 0 && (
-                    <span aria-hidden="true" className="text-muted-foreground">
-                      ·
-                    </span>
-                  )}
-                  <a
-                    href={link.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-primary underline-offset-4 hover:underline"
-                  >
-                    {link.label}
-                  </a>
-                </span>
-              ))}
-            </p>
+          <Reveal className="text-center">
+            <a
+              href="https://scholar.google.com/citations?hl=en&user=wURU1tQAAAAJ"
+              target="_blank"
+              rel="noreferrer"
+              className="sheen inline-block bg-primary px-[50px] py-[16px] text-[20px] font-bold tracking-[0.08em] text-primary-foreground uppercase transition-opacity hover:opacity-90"
+            >
+              For a complete list, find us on Google Scholar
+            </a>
           </Reveal>
 
-          <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <Reveal
+            delay={80}
+            className="mt-6 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm"
+          >
+            {profileLinks.map((link, i) => (
+              <span key={link.label} className="flex items-center gap-x-4">
+                {i > 0 && (
+                  <span aria-hidden="true" className="text-muted-foreground">
+                    ·
+                  </span>
+                )}
+                <a
+                  href={link.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-primary underline-offset-4 hover:underline"
+                >
+                  {link.label}
+                </a>
+              </span>
+            ))}
+          </Reveal>
+
+          <div className="mt-14 flex flex-wrap justify-center gap-[20px]">
             {featuredPublications.map((p, i) => (
               <Reveal key={p.title} delay={i * 80}>
-                <article className="group flex h-full flex-col">
-                  <div className="art-tile relative aspect-[4/3] overflow-hidden border border-border">
+                <article className="group flex h-[647.219px] w-[377.828px] flex-col overflow-hidden border border-border bg-card">
+                  <div className="art-tile aspect-[3/2] w-full shrink-0 overflow-hidden">
                     <img
                       src={p.image}
                       alt={p.title}
@@ -94,22 +106,24 @@ function FeaturedPublicationsPage() {
                       className="h-full w-full object-cover transition-transform duration-[1200ms] group-hover:scale-105"
                     />
                   </div>
-                  <p className="mt-5 font-display text-lg leading-snug font-semibold transition-colors group-hover:text-primary">
-                    {p.title}
-                  </p>
-                  <p className="mt-2 text-sm text-muted-foreground">
-                    {p.authors} · <em>{p.venue}</em> ({p.year})
-                  </p>
-                  {p.doi && (
-                    <a
-                      href={`https://doi.org/${p.doi}`}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="eyebrow sheen mt-4 inline-block self-start border border-border px-4 py-2 text-xs transition-all duration-300 hover:-translate-y-0.5 hover:border-primary hover:text-primary"
-                    >
-                      Read it →
-                    </a>
-                  )}
+                  <div className="flex flex-1 flex-col p-7">
+                    <p className="line-clamp-6 text-[21.6752px] leading-snug transition-colors group-hover:text-primary">
+                      {p.title}
+                    </p>
+                    <p className="mt-3 line-clamp-2 flex-1 text-sm text-muted-foreground">
+                      {p.authors} · <em>{p.venue}</em> ({p.year})
+                    </p>
+                    {p.doi && (
+                      <a
+                        href={`https://doi.org/${p.doi}`}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="eyebrow sheen mt-6 inline-block w-fit bg-ink px-[45px] py-[14.4px] text-[18px] font-bold tracking-[0.08em] text-ink-foreground uppercase transition-opacity hover:opacity-90"
+                      >
+                        Read it
+                      </a>
+                    )}
+                  </div>
                 </article>
               </Reveal>
             ))}
