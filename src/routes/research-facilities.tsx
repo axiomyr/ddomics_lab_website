@@ -37,7 +37,6 @@ function FacilitiesPage() {
             Instruments <span className="silver-text">&amp; facilities</span>
           </>
         }
-        lede="What the lab can run in-house, from anaerobic culture on the bench to sequencing."
       />
 
       <section className="bg-background">

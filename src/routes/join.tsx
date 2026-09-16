@@ -55,7 +55,6 @@ function JoinPage() {
             Let's <span className="silver-text">collaborate</span>
           </>
         }
-        lede="The lab sits at the intersection of microbiology, sequencing and data science. If you want to work on the Indian microbiome at scale, there's likely a project here for you."
       />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
