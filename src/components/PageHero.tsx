@@ -73,7 +73,7 @@ export function PageHero({
         <Reveal>
           <p className="eyebrow mb-5 opacity-60">{eyebrow}</p>
           <h1
-            className={`display-title text-4xl sm:text-5xl lg:text-6xl ${
+            className={`display-title text-4xl font-bold sm:text-5xl lg:text-[60.2048px] ${
               align === "center" ? "mx-auto max-w-4xl" : "max-w-4xl"
             }`}
           >
