@@ -35,29 +35,22 @@ const sections = [
     category: "Publication" as const,
   },
   {
-    to: "/news/talks" as const,
-    eyebrow: "02",
-    title: "Talks",
-    body: "Invited talks, conference presentations and seminars given by the lab.",
-    category: "Talks" as const,
-  },
-  {
     to: "/news/career-notifications" as const,
-    eyebrow: "03",
+    eyebrow: "02",
     title: "Career Notifications",
     body: "Openings for positions and studentships in the lab.",
     category: "Career Notification" as const,
   },
   {
     to: "/news/announcements" as const,
-    eyebrow: "04",
+    eyebrow: "03",
     title: "Announcements",
     body: "Grants, awards, collaborations and other lab news.",
     category: "Announcements" as const,
   },
   {
     to: "/news/media" as const,
-    eyebrow: "05",
+    eyebrow: "04",
     title: "Media",
     body: "Press coverage and media mentions of the lab's work.",
     category: "Media" as const,
@@ -75,7 +68,6 @@ function NewsPage() {
             <em>Latest</em> News <em>&amp;</em> Media
           </>
         }
-        lede="Publication alerts, talks, press and everyday life inside the lab, organized into five sections below."
       />
 
       <section className="bg-background">
