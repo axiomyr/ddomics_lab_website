@@ -112,16 +112,7 @@ function PeoplePage() {
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,var(--deep)_8%,color-mix(in_oklch,var(--deep)_60%,transparent)_55%,color-mix(in_oklch,var(--deep)_78%,transparent)_100%)]"
         />
-        <div className="relative mx-auto flex min-h-[64vh] max-w-7xl flex-col justify-end px-6 pt-44 pb-16 lg:px-10 lg:pt-52 lg:pb-24">
-          <Reveal>
-            <p className="eyebrow mb-5 opacity-60">People</p>
-            <p className="measure mt-2 leading-relaxed opacity-80">
-              A mix of microbiologists, bioinformaticians and students working
-              between the wet lab and the compute cluster at the National Centre
-              for Cell Science, Pune.
-            </p>
-          </Reveal>
-        </div>
+        <div className="relative mx-auto flex min-h-[64vh] max-w-7xl flex-col justify-end px-6 pt-44 pb-16 lg:px-10 lg:pt-52 lg:pb-24" />
       </section>
 
       <section id="current-members" className="scroll-mt-24 bg-surface">
