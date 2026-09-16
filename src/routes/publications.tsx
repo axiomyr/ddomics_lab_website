@@ -60,7 +60,6 @@ function PublicationsPage() {
             Papers from <span className="silver-text">the lab</span>
           </>
         }
-        lede="Featured studies and the complete list grouped by research theme. Each entry links out to the publisher via DOI."
       />
 
       <section className="bg-background">
