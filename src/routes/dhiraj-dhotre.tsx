@@ -80,16 +80,16 @@ function PIPage() {
           <div className="lg:col-span-8">
             <Reveal>
               <p className="eyebrow mb-5 opacity-60">Principal Investigator</p>
-              <h1 className="display-title silver-text text-4xl sm:text-5xl lg:text-6xl">
+              <h1 className="display-title silver-text text-4xl font-bold sm:text-5xl lg:text-[60.2048px]">
                 {pi.name}
               </h1>
-              <p className="mt-4 font-display text-xl font-semibold text-primary">
+              <p className="mt-5 font-display text-[28.376px] font-bold leading-snug text-primary">
                 {pi.title}
               </p>
-              <p className="mt-1 text-sm opacity-70">{pi.institute}</p>
+              <p className="mt-2 text-[21.6752px] opacity-70">{pi.institute}</p>
             </Reveal>
             <Reveal delay={120}>
-              <p className="measure mt-8 leading-relaxed opacity-85">
+              <p className="measure mt-8 text-[21.6752px] leading-relaxed opacity-85">
                 {pi.about}
               </p>
             </Reveal>
