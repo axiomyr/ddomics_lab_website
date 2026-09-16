@@ -2,8 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Reveal } from "@/components/Reveal";
 import { DomainsMarquee } from "@/components/DomainsMarquee";
 import heroBg from "@/assets/microbiome-heads.png";
-import artHand from "@/assets/art-hand.png";
-import artMicrobes from "@/assets/art-microbes.png";
 import logoBmgf from "@/assets/collaborators/bmgf.png";
 import logoDst from "@/assets/collaborators/dst.png";
 import logoDbt from "@/assets/collaborators/dbt.png";
@@ -53,18 +51,6 @@ function Home() {
 
       {/* Mission — directly beneath the hero image, no gap */}
       <section className="relative overflow-hidden bg-ink text-ink-foreground">
-        <img
-          src={artHand}
-          alt=""
-          aria-hidden="true"
-          className="pointer-events-none absolute -left-16 bottom-0 hidden h-[85%] object-contain opacity-25 mix-blend-screen lg:block"
-        />
-        <img
-          src={artMicrobes}
-          alt=""
-          aria-hidden="true"
-          className="pointer-events-none absolute -right-20 top-6 hidden h-[70%] object-contain opacity-25 mix-blend-screen lg:block"
-        />
         <div className="relative mx-auto max-w-4xl px-6 pt-16 pb-16 text-center lg:pt-20 lg:pb-20">
           <Reveal delay={120}>
             <h1 className="display-title text-4xl leading-[1.15] sm:text-5xl lg:text-6xl">
@@ -74,7 +60,7 @@ function Home() {
             </h1>
           </Reveal>
           <Reveal delay={200}>
-            <p className="measure mx-auto mt-8 text-lg leading-relaxed text-muted-foreground">
+            <p className="measure mx-auto mt-8 text-[21.7px] leading-relaxed text-muted-foreground">
               Human body harbors microbial cells in 1:1 proportion to human
               cells and these microbes are involved in host activities
               including metabolism, immune modulation and production of
@@ -84,7 +70,7 @@ function Home() {
             </p>
           </Reveal>
           <Reveal delay={280}>
-            <p className="measure mx-auto mt-6 text-lg leading-relaxed text-muted-foreground">
+            <p className="measure mx-auto mt-6 text-[21.7px] leading-relaxed text-muted-foreground">
               In the DDOmics Lab, we study microbial community structure and
               function in human health and diseases using classic
               microbiology techniques, next generation sequencing and
@@ -102,7 +88,7 @@ function Home() {
         <div className="py-14 lg:py-20">
           <Reveal className="mx-auto mb-10 max-w-2xl px-6 text-center lg:px-10">
             <p className="eyebrow mb-4 text-muted-foreground">Research</p>
-            <h2 className="display-title text-3xl lg:text-4xl">
+            <h2 className="display-title text-3xl lg:text-[45.13px]">
               Our lab researches in the following domains
             </h2>
           </Reveal>
@@ -126,22 +112,22 @@ function Home() {
             <img
               src={logoBmgf}
               alt="Bill &amp; Melinda Gates Foundation"
-              className="h-10 w-auto object-contain grayscale lg:h-12"
+              className="h-24 w-auto object-contain grayscale lg:h-28"
             />
             <img
               src={logoDst}
               alt="Department of Science and Technology, Government of India"
-              className="h-16 w-auto object-contain grayscale lg:h-20"
+              className="h-24 w-auto object-contain grayscale lg:h-28"
             />
             <img
               src={logoDbt}
               alt="Department of Biotechnology, Government of India"
-              className="h-16 w-auto object-contain grayscale lg:h-20"
+              className="h-24 w-auto object-contain grayscale lg:h-28"
             />
             <img
               src={logoNccs}
               alt="National Centre for Cell Science"
-              className="h-16 w-auto object-contain grayscale lg:h-20"
+              className="h-24 w-auto object-contain grayscale lg:h-28"
             />
           </Reveal>
         </div>
