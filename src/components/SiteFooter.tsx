@@ -1,99 +1,107 @@
 import { Link } from "@tanstack/react-router";
-import { Github } from "lucide-react";
+import { Github, Twitter } from "lucide-react";
 import { lab, navLinks } from "@/lib/lab-data";
 import iconGmail from "@/assets/social/gmail.png";
+import labLogo from "@/assets/lab-logo-mark.png";
 
 export function SiteFooter() {
   return (
     <footer className="bg-ink text-ink-foreground/60">
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
-        <p className="display-title silver-text mb-6 text-center text-lg">
-          The {lab.name} at {lab.institute}
-        </p>
-        <hr className="silver-rule mx-auto mb-14 w-2/3" />
+        <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-16">
+          <img
+            src={labLogo}
+            alt={`${lab.name} logo`}
+            className="h-32 w-32 shrink-0 object-contain opacity-90"
+          />
 
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
-          <div>
-            <p className="display-title mb-5 text-[28.376px] font-bold text-primary">
-              Contact
-            </p>
-            <p className="text-[21.6752px] leading-relaxed">
-              Dr. Dhiraj S. Dhotre, Scientist 'E'
-              <br />
-              Lab 3, Old Building
-              <br />
-              NCCS, SPPU Campus
-              <br />
-              Pune 411007
-            </p>
-          </div>
-
-          <div>
-            <p className="display-title mb-5 text-[28.376px] font-bold text-primary">
-              Navigate
-            </p>
-            <ul className="space-y-5 text-[21.6752px]">
-              {navLinks.map((l) => (
-                <li key={l.to}>
-                  <Link
-                    to={l.to}
-                    className="transition-colors hover:text-ink-foreground"
-                  >
-                    {l.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <p className="display-title mb-5 text-[28.376px] font-bold text-primary">
-              More
-            </p>
-            <ul className="space-y-5 text-[21.6752px]">
-              <li>
-                <Link
-                  to="/join"
-                  className="transition-colors hover:text-ink-foreground"
-                >
-                  Join the Lab
-                </Link>
-              </li>
-              <li>
+          <div className="grid flex-1 grid-cols-1 gap-10 sm:grid-cols-3">
+            <div>
+              <p className="display-title mb-5 text-[28.376px] font-bold text-primary">
+                Contact
+              </p>
+              <p className="text-[21.6752px] leading-relaxed">
+                Dr. Dhiraj S. Dhotre, Scientist 'E'
+                <br />
+                Lab 3, Old Building
+                <br />
+                NCCS, SPPU Campus
+                <br />
+                Pune 411007
+              </p>
+              <p className="mt-5 text-[21.6752px] leading-relaxed">
                 <a
                   href={`mailto:${lab.email}`}
-                  title={lab.email}
-                  aria-label={`Email ${lab.email}`}
-                  className="inline-flex items-center gap-2 transition-opacity hover:opacity-80"
+                  className="inline-flex items-center gap-2 transition-colors hover:text-ink-foreground"
                 >
-                  <img src={iconGmail} alt="" className="h-5 w-5 rounded-sm" />
+                  <img
+                    src={iconGmail}
+                    alt=""
+                    className="h-5 w-5 rounded-sm"
+                  />
                   {lab.email}
                 </a>
-              </li>
-              <li>
+              </p>
+            </div>
+
+            <div className="sm:col-span-2">
+              <p className="display-title mb-5 text-[28.376px] font-bold text-primary">
+                Quick Links
+              </p>
+              <div className="flex items-start gap-16">
+                <ul className="space-y-5 text-[21.6752px]">
+                  {navLinks.slice(0, 3).map((l) => (
+                    <li key={l.to}>
+                      <Link
+                        to={l.to}
+                        className="underline underline-offset-4 transition-colors hover:text-ink-foreground"
+                      >
+                        {l.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+                <ul className="space-y-5 text-[21.6752px]">
+                  {navLinks.slice(3).map((l) => (
+                    <li key={l.to}>
+                      <Link
+                        to={l.to}
+                        className="underline underline-offset-4 transition-colors hover:text-ink-foreground"
+                      >
+                        {l.label}
+                      </Link>
+                    </li>
+                  ))}
+                  <li>
+                    <Link
+                      to="/join"
+                      className="underline underline-offset-4 transition-colors hover:text-ink-foreground"
+                    >
+                      Join the Lab
+                    </Link>
+                  </li>
+                </ul>
                 <a
                   href={lab.twitter}
-                  className="transition-colors hover:text-ink-foreground"
+                  aria-label="@DDOmicsLab on Twitter/X"
+                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-ink-foreground text-ink transition-opacity hover:opacity-80"
                 >
-                  @DDOmicsLab
+                  <Twitter className="h-5 w-5" fill="currentColor" />
                 </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <p className="display-title mb-5 text-[28.376px] font-bold text-primary">
-              Funded by
-            </p>
-            <p className="text-[21.6752px] leading-relaxed">
-              Department of Biotechnology, Department of Science &amp;
-              Technology, and Science &amp; Engineering Research Board, New
-              Delhi.
-            </p>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col items-center gap-4 border-t border-ink-foreground/10 pt-8 sm:flex-row sm:justify-between">
+        <p className="mt-10 text-[21.6752px] leading-relaxed">
+          Funded by the Department of Biotechnology, Department of Science
+          &amp; Technology, and Science &amp; Engineering Research Board, New
+          Delhi.
+        </p>
+
+        <hr className="my-10 border-primary/60" />
+
+        <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
           <p className="font-mono text-[12px] opacity-50">
             © {new Date().getFullYear()} {lab.name}, NCCS Pune. All rights
             reserved.
