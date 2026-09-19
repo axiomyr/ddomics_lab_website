@@ -1353,10 +1353,44 @@ export const people: Person[] = [
   {
     slug: "mitali-inamdar",
     name: "Mitali Inamdar",
-    role: "Ph.D. Student",
+    role: "Senior Research Fellow",
     group: "student",
     photo: photoMitaliInamdar,
-    noProfilePage: true,
+    joinedYear: "2018",
+    researchFocus:
+      "Human microbiome research spanning next-generation sequencing, mother–infant microbiome dynamics, microbial ecology, metagenomics, microbial genomics, microbial therapeutics and probiotics.",
+    bio: "I am a microbiome researcher interested in understanding the human body as a dynamic ecosystem in which microbes, host physiology, diet, and metabolites continuously interact to shape health across the human lifespan. My work brings together microbiology, metagenomics, nutrition, physiology, and microbial ecology to study the human microbiome from its earliest beginnings to its complex dynamics in adulthood, and ultimately to explore how these microbial ecosystems can be translated into therapeutic and nutritional applications. As part of my PhD research, I investigate mother–infant microbial dynamics, with a particular focus on the potential entero-mammary pathway and other routes of early microbial acquisition. Breast milk is both a nutritional resource and a complex biological interface between mother and infant, carrying microbes, metabolites, and bioactive components that may influence the establishment of the infant gut ecosystem. I study these interactions across mother, breast milk, and infant compartments to understand how microbial communities are transferred, assembled, and functionally shaped during early life. Apart from this, I have been closely involved in the Indian Human Microbiome Initiative (IHMI), a flagship Government of India program, from its sampling phase through large scale microbiome data generation and analysis across diverse Indian populations. My broader work spans both culture-independent and culture-dependent approaches, including next-generation sequencing, metagenomics, microbial community analysis, anaerobic microbial isolation and cultivation, genomic characterization, and the development and application of potential probiotics.",
+    education: [
+      {
+        degree: "M.Sc. Microbiology",
+      },
+    ],
+    awards: ["Best Oral Award, 15th India Probiotic Symposium"],
+    publications: [
+      {
+        title:
+          "Oral microbiome profiles in oral potentially malignant disorders and oral cancer — a diagnostic perspective",
+        doi: "10.4103/jomfp.jomfp_140_24",
+      },
+      {
+        title:
+          "Site-specific gut microbial signatures in non-celiac gluten sensitivity",
+        doi: "10.1080/29933935.2024.2438621",
+      },
+      {
+        title:
+          "Anthropogenic activities induce depletion in microbial communities at urban sites of the River Ganges",
+        doi: "10.1007/s00284-017-1352-5",
+      },
+    ],
+    outsideLab:
+      "Mountain person at heart! Happiest chasing trails, watching wildlife, stargazing under open skies or taking a refreshing swim in the summer — whenever possible, trading screens and city life for a little more time in nature.",
+    quote:
+      "I believe life is best lived with curiosity and with willingness to keep learning!",
+    socials: {
+      twitter: "https://x.com/mitali_inamdar",
+      linkedin: "https://www.linkedin.com/in/mitali-inamdar",
+    },
   },
   {
     slug: "puja-ghosh",
