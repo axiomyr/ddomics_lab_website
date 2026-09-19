@@ -20,13 +20,16 @@ export function SiteFooter() {
               <p className="display-title mb-5 text-[28.376px] font-bold text-primary">
                 Contact
               </p>
-              <p className="text-[21.6752px] leading-relaxed">
+              <p className="text-[21.6752px] leading-relaxed font-bold text-ink-foreground">
                 Dr. Dhiraj S. Dhotre, Scientist 'E'
-                <br />
+              </p>
+              <p className="mt-5 text-[21.6752px] leading-relaxed">
                 Lab 3, Old Building
-                <br />
+              </p>
+              <p className="mt-5 text-[21.6752px] leading-relaxed">
                 NCCS, SPPU Campus
-                <br />
+              </p>
+              <p className="mt-5 text-[21.6752px] leading-relaxed">
                 Pune 411007
               </p>
               <p className="mt-5 text-[21.6752px] leading-relaxed">
@@ -84,7 +87,7 @@ export function SiteFooter() {
                 <a
                   href={lab.twitter}
                   aria-label="@DDOmicsLab on Twitter/X"
-                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-ink-foreground text-ink transition-opacity hover:opacity-80"
+                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white text-ink transition-opacity hover:opacity-80"
                 >
                   <Twitter className="h-5 w-5" fill="currentColor" />
                 </a>
