@@ -2,20 +2,12 @@ import { Link } from "@tanstack/react-router";
 import { Github, Twitter } from "lucide-react";
 import { lab, navLinks } from "@/lib/lab-data";
 import iconGmail from "@/assets/social/gmail.png";
-import labLogo from "@/assets/lab-logo-mark.png";
 
 export function SiteFooter() {
   return (
     <footer className="bg-[#0d1321] text-white/60">
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
-        <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between lg:gap-8">
-          <img
-            src={labLogo}
-            alt={`${lab.name} logo`}
-            className="h-32 w-32 shrink-0 object-contain opacity-90"
-          />
-
-          <div className="grid flex-1 grid-cols-1 gap-10 sm:grid-cols-3 lg:gap-24">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-3 lg:gap-24">
             <div>
               <p className="display-title mb-5 text-[28.376px] font-bold text-primary">
                 Contact
@@ -94,13 +86,17 @@ export function SiteFooter() {
               </div>
             </div>
           </div>
-        </div>
 
-        <p className="mt-10 text-[21.6752px] leading-relaxed">
-          Funded by the Department of Biotechnology, Department of Science
-          &amp; Technology, and Science &amp; Engineering Research Board, New
-          Delhi.
-        </p>
+        <div className="mt-14 border-t border-white/10 pt-10">
+          <p className="display-title mb-5 text-[28.376px] font-bold text-primary">
+            Funded By
+          </p>
+          <ul className="space-y-3 text-[21.6752px] leading-relaxed">
+            <li>Department of Biotechnology</li>
+            <li>Department of Science &amp; Technology</li>
+            <li>Science &amp; Engineering Research Board, New Delhi</li>
+          </ul>
+        </div>
 
         <hr className="my-10 border-primary/60" />
 
